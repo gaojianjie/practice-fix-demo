@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+     <Button type="default" ghost>Default</Button>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
       check out the
@@ -33,12 +34,24 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+  import { Component, Prop, Vue } from 'vue-property-decorator';
 
-@Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
-}
+  @Component
+  export default class HelloWorld extends Vue {
+    @Prop({
+      type: String,
+      default: '你猜我是谁',
+    }) private msg: string | undefined;
+
+    private created() {
+      window.console.log(this.msg);
+    }
+
+    private mounted() {
+      window.console.log(456);
+    }
+
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
