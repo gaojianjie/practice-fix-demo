@@ -1,6 +1,6 @@
 <template>
-    <div class="slider-list">
-        <Menu :theme="theme2" :open-names="['1']" accordion width="auto">
+    <div :class="['slider-list', store.theme]">
+        <Menu :theme="store.theme" :open-names="['1']" accordion width="auto">
             <Submenu name="1">
                 <template slot="title">
                     <Icon type="lianxi" />
@@ -39,6 +39,7 @@
 
 <script lang="ts">
     import { Component, Prop, Vue } from 'vue-property-decorator';
+    import { state } from '@/store/store.js'
     @Component
     export default class HelloWorld extends Vue {
         @Prop({
@@ -46,20 +47,40 @@
         default: '你猜我是谁',
         }) private msg: string | undefined;
 
+        private theme2: string = 'light';
+
+        constructor() {
+          super();
+        };
+
+        get store () {
+            return this.$store.state
+        }
+
         private created() {
-        window.console.log(this.msg);
+            window.console.log(this.msg);
         }
 
         private mounted() {
-        window.console.log(456);
+            console.log(this.store, '123')
+            window.console.log(456);
         }
-
     }
 </script>
 
 <style lang="less" scopedSlots>
-    .slider-list /deep/ .ivu-menu::after{
-        width:0!important;
+    .slider-list{
+        min-height: 100%;
+        /deep/ .ivu-menu::after{
+            width:0!important;
+            background: white;
+        }
+    }
+    .light{
         background: white;
+    }
+
+    .dark{
+        background: #515a6e
     }
 </style>
