@@ -22,13 +22,10 @@ const getDataTime = (times, options) => {
         switch (true) {
             case (num == 0):
                 return '00'
-                break;
             case (num < 10):
                 return '0' + num
-                break;
             default:
                 return num
-                break;
         }
     }
     let date = new Date(times); // 13位时间戳

@@ -39,13 +39,14 @@
 
 <script lang="ts">
     import { Component, Prop, Vue } from 'vue-property-decorator';
-    import { state } from '@/store/store.js'
     @Component
     export default class HelloWorld extends Vue {
         @Prop({
         type: String,
         default: '你猜我是谁',
         }) private msg: string | undefined;
+
+        private that = this
 
         private theme2: string = 'light';
 
@@ -76,6 +77,7 @@
             background: white;
         }
     }
+    
     .light{
         background: white;
     }

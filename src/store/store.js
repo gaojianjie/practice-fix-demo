@@ -18,6 +18,5 @@ export default new Vuex.Store({
             state.theme = value;
         },
         //这里是set方法
-
     },
 })
