@@ -3,10 +3,10 @@
         <Menu :theme="store.theme" :open-names="['1']" accordion width="auto">
             <Submenu name="1">
                 <template slot="title">
-                    <Icon type="lianxi" />
-                    练习demo
+                    <Icon type="ios-people" />
+                    {{ $t('header.h1') }}
                 </template>
-                <MenuItem name="1-1">文章管理</MenuItem>
+                <MenuItem name="1-1">demo</MenuItem>
                 <MenuItem name="1-2">评论管理</MenuItem>
                 <MenuItem name="1-3">举报管理</MenuItem>
             </Submenu>

@@ -1,7 +1,10 @@
 <template>
     <div :class="['header', store.theme]">
         <Header class="header" :theme="store.theam">
-            <span>{{ $t('header.h1') }}</span>
+            <div class="left-content">
+                <img class="logo" src="../../../assets/img/v2-fce4f8a778fe3f24bca2cafc709b6847_hd.jpg" alt="">
+                <span>{{ $t('header.h1') }}</span>
+            </div>
             <div>
                 <Dropdown @on-click="checkLanguage" style="margin-right:20px">
                     <a href="javascript:void(0)">
@@ -71,6 +74,18 @@ export default {
             background: transparent
         }
     }
+
+    .left-content{
+        display: flex;
+        align-items: center;
+        .logo{
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+    }
+
+    
 
     .light{
         /deep/ .ivu-layout-header{
