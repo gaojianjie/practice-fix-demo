@@ -15,7 +15,7 @@
                 </Dropdown>
                 <Dropdown @on-click="onClick">
                     <a href="javascript:void(0)">
-                        {{ store.theme == 'light' ? $t('theame.light') : $t('theame.dart') }}
+                        {{ store.theme == 'light' ? $t('theame.light') : $t('theame.dark') }}
                         <Icon type="ios-arrow-down"></Icon>
                     </a>
                     <DropdownMenu slot="list">
