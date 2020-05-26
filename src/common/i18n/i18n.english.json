@@ -1,0 +1,10 @@
+{
+    "header":{
+        "lang":"English",
+        "h1":"practice demo"
+    },
+    "theame": {
+        "light": "light",
+        "dark": "dark"
+    }
+}
