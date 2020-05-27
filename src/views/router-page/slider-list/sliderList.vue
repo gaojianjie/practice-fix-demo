@@ -78,11 +78,11 @@
         }
     }
     
-    .light{
-        background: white;
-    }
+    // .light{
+    //     background: white;
+    // }
 
-    .dark{
-        background: #515a6e
-    }
+    // .dark{
+    //     background: #515a6e
+    // }
 </style>

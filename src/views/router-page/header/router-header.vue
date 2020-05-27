@@ -102,18 +102,4 @@
             margin-right: 10px;
         }
     }
-
-    .light{
-        /deep/ .ivu-layout-header{
-            background: white;
-            color:#515a6e;
-        }
-    }
-
-    .dark{
-        /deep/ .ivu-layout-header{
-            background: #515a6e;
-            color: rgba(255,255,255,.7);
-        }
-    }
 </style>

@@ -4,6 +4,7 @@ import router from './router';
 import store from './store/store.js';
 import ViewUI from 'view-design';
 import "view-design/dist/styles/iview.css";
+import "./assets/css/publicClass.less";
 import "./modules"
 import { i18n } from './common/i18n/i18n.js';
 Vue.use(ViewUI);
