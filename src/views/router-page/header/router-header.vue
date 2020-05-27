@@ -31,32 +31,50 @@
     </div>
 </template>
 
-<script>
-export default {
-    name:'routerheader',
-    data() {
-        return {
-            theme:'light',
-        }
-    },
+<script lang="ts">
+    import { Component, Prop, Vue } from 'vue-property-decorator';
 
-    computed: {
-        store() {
+    @Component
+    export default class routerHeader extends Vue {
+        @Prop({
+            type: String,
+            default: '你猜我是谁',
+        }) private msg: string | undefined;
+
+        private theme:string = 'light'
+
+        created() {
+            console.log(this, '++')
+            window.console.log(this.msg);
+        }
+        private mounted() {
+            console.log(this,'123')
+            window.console.log(456);
+        }
+        /**
+         * 切换语言
+         * @params { String } data 切换的种类
+         */
+        checkLanguage(data:string): void {
+            console.log(this)
+            this.$i18n.locale = data;
+        }
+
+        /**
+         * 切换主题
+         * @params { String } data 切换的种类
+         */
+        onClick(data:string): void {
+            this.$store.commit('SET_THEAM', data)
+        }
+
+        /**
+         * 获取store实例
+        */
+        private get store() {
             return this.$store.state
         }
-    },
-
-    methods:{
-        checkLanguage(data) {
-            console.log(this.$i18n, data, '+++++')
-            this.$i18n.locale = data;
-        },
-        onClick(data) {
-            this.$store.commit('SET_THEAM', data)
-            // this.theme = data;
-        }
     }
-}
 </script>
 <style lang="less" scopedSlots>
     .header{
@@ -84,8 +102,6 @@ export default {
             margin-right: 10px;
         }
     }
-
-    
 
     .light{
         /deep/ .ivu-layout-header{
