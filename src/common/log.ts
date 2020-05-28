@@ -1,4 +1,4 @@
-export default function() {
+export default function():void {
     if (process.env == 'production') {
 
     } else {

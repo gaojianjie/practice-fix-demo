@@ -43,19 +43,17 @@
 
         private theme:string = 'light'
 
-        created() {
-            console.log(this, '++')
-            window.console.log(this.msg);
+        private created() {
+            this.$Log(this.msg, '+++')
         }
         private mounted() {
-            console.log(this,'123')
             window.console.log(456);
         }
         /**
          * 切换语言
          * @params { String } data 切换的种类
          */
-        checkLanguage(data:string): void {
+        public checkLanguage(data:string): void {
             console.log(this)
             this.$i18n.locale = data;
         }
@@ -64,7 +62,7 @@
          * 切换主题
          * @params { String } data 切换的种类
          */
-        onClick(data:string): void {
+        public onClick(data:string): void {
             this.$store.commit('SET_THEAM', data)
         }
 

@@ -1,6 +1,6 @@
 <template>
     <div class="demo">
-        这个是子页面
+        这个是子页面,你猜我是谁
     </div>
 </template>
 

@@ -5,12 +5,12 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### 本地启动命令
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+### 打包命令
 ```
 npm run build
 ```
