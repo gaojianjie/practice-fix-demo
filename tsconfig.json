@@ -12,9 +12,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env",
-      "mocha",
-      "chai"
+      "webpack-env"
     ],
     "paths": {
       "@/*": [
@@ -33,7 +31,7 @@
     "src/**/*.tsx",
     "src/**/*.vue",
     "tests/**/*.ts",
-    "tests/**/*.tsx"
+    "tests/**/*.tsx", "src/common/i18n/i18nconfig.js"
   ],
   "exclude": [
     "node_modules"

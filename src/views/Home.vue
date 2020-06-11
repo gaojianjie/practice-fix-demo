@@ -20,22 +20,27 @@
   </div> 
 </template>
 
-<script>
+<script lang="ts">
   // @ is an alias to /src
-  import sliderList from './router-page/slider-list/sliderList.vue'
-  import routerHeader from './router-page/header/router-header.vue'
-  import routerFooter from './router-page/router-footer/router-footer.vue'
-  export default {
-    name: 'Home',
-    components:{
+  import sliderList from "./router-page/slider-list/sliderList.vue"
+  import routerHeader from "./router-page/header/router-header.vue"
+  import routerFooter from "./router-page/router-footer/router-footer.vue"
+ 
+  import { Component, Prop, Vue } from "vue-property-decorator";
+
+  @Component({
+    components: {
       sliderList,
       routerHeader,
       routerFooter
     },
-  };
+  })
+  export default class Home extends Vue {
+
+  }
 </script>
 
-<style lang="less" scopedSlots>
+<style lang="scss" scopedSlots>
   .home{
     width: 100%;
     height: 100%;

@@ -32,19 +32,19 @@
 </template>
 
 <script lang="ts">
-    import { Component, Prop, Vue } from 'vue-property-decorator';
+    import { Component, Prop, Vue } from "vue-property-decorator";
 
     @Component
-    export default class routerHeader extends Vue {
+    export default class RouterHeader extends Vue {
         @Prop({
             type: String,
-            default: '你猜我是谁',
+            default: "你猜我是谁",
         }) private msg: string | undefined;
 
-        private theme:string = 'light'
+        private theme: string = "light"
 
         private created() {
-            this.$Log(this.msg, '+++')
+            console.log(this.theme, "_+++");
         }
         private mounted() {
             window.console.log(456);
@@ -53,7 +53,7 @@
          * 切换语言
          * @params { String } data 切换的种类
          */
-        public checkLanguage(data:string): void {
+        public checkLanguage(data: string): void {
             console.log(this)
             this.$i18n.locale = data;
         }
@@ -62,19 +62,20 @@
          * 切换主题
          * @params { String } data 切换的种类
          */
-        public onClick(data:string): void {
-            this.$store.commit('SET_THEAM', data)
+        public onClick(data: string): void {
+            this.$store.commit("SET_THEAM", data)
         }
 
         /**
          * 获取store实例
-        */
+         */
         private get store() {
+            console.log(this.$store.state, "sttate")
             return this.$store.state
         }
     }
 </script>
-<style lang="less" scopedSlots>
+<style lang="scss" scopedSlots>
     .header{
         background: white;
         /deep/ .ivu-layout-header{
@@ -87,7 +88,6 @@
             box-shadow: 0 1px 1px rgba(0,0,0,.08);
             display: flex;
             justify-content: space-between;
-            background: transparent
         }
     }
 

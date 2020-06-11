@@ -1,16 +1,30 @@
 {
   "defaultSeverity": "warning",
-  "extends": ["tslint:recommended"],
+  "extends": [
+    "tslint:recommended"
+  ],
   "linterOptions": {
-    "exclude": ["node_modules/**"]
+    "exclude": [
+      "node_modules/**"
+    ]
   },
   "rules": {
-    "indent": [true, "spaces", 2],
+    "member-ordering": false,
+    "no-console": false,
+    "indent": [true, "spaces", 4],
+    "no-trailing-whitespace": false,
     "interface-name": false,
     "no-consecutive-blank-lines": false,
     "object-literal-sort-keys": false,
     "ordered-imports": false,
-    "quotemark": [true, "single"]
-  },
-  "no-inferrable-types": [true, "ignore-params", "ignore-properties"]
+    "quotemark": [true, "jsx-single"],
+    "array-type": [false, "array"],
+    "semicolon": [ false,"always"],
+    "only-arrow-functions": [
+      false
+    ],
+    "trailing-comma": [
+      false
+    ]
+  }
 }

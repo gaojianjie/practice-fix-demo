@@ -5,13 +5,13 @@
 </template>
 
 <script>
-    import { useTimes } from '@/common/utils.js'
+    import { useTimes } from "@/common/utils.js"
     export default {
-        name:'routerfooter',
+        name: "routerfooter",
         data() {
             return {
-                timer:null,
-                time_str:'',
+                timer: null,
+                time_str: "",
             }
         },
 
@@ -28,7 +28,7 @@
 
 </script>
 
-<style lang="less" scoped>
+<style lang="scss" scoped>
     .router-footer{
         border-top: 1px solid #dcdee2;
         /deep/  .ivu-layout-footer{

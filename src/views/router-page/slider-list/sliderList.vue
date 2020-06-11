@@ -38,24 +38,24 @@
 </template>
 
 <script lang="ts">
-    import { Component, Prop, Vue } from 'vue-property-decorator';
+    import { Component, Prop, Vue } from "vue-property-decorator";
     @Component
     export default class HelloWorld extends Vue {
         @Prop({
         type: String,
-        default: '你猜我是谁',
+        default: " 你猜我是谁",
         }) private msg: string | undefined;
 
-        private that = this
+        private that = this;
 
-        private theme2: string = 'light';
+        private theme2: string = "light";
 
         constructor() {
           super();
         };
 
-        get store () {
-            return this.$store.state
+        private get store() {
+            return this.$store.state;
         }
 
         private created() {
@@ -63,13 +63,12 @@
         }
 
         private mounted() {
-            console.log(this.store, '123')
             window.console.log(456);
         }
     }
 </script>
 
-<style lang="less" scopedSlots>
+<style lang="scss" scopedSlots>
     .slider-list{
         min-height: 100%;
         /deep/ .ivu-menu::after{
